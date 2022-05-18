@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><%= @task.title %></h1>
+    <p><%= @task.details %></p>
+    <p>completed: <%= @task.completed %></p>
+    <%= link_to 'Edit', edit_task_url %>
+    <%= link_to 'List of my tasks', tasks_url %>
+    <%= link_to 'Delete', delete_task_url, method: :delete, data: { confirm: "Are you sure?" } %>
+  </body>
+</html>
